@@ -4,7 +4,8 @@ from app.services.sensor_data_service import get_last_sensor_log
 import logging
 import pandas as pd
 from app.services.db_service import supabase
-from app.ml.model_loader import plant_type_encoder, multi_rf
+from app.ml.model_loader import load_models
+
 
 router = APIRouter(prefix="/api", tags=["Sensor Data"])
 
