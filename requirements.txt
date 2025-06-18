@@ -10,3 +10,10 @@ scipy==1.11.4
 python-multipart==0.0.9
 requests==2.31.0
 pydantic==2.6.4
+
+python-dotenv==1.1.0      # for load_dotenv
+supabase-py                # to use create_client in db_service.py
+pyserial                   # for serial communication in system_service.py
+Pillow                     # for Image processing in diagnose_photo_router
+tensorflow                 # used in ml_service.py
+
