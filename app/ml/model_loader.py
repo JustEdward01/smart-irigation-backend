@@ -1,7 +1,7 @@
 import joblib
-import numpy
-import sklearn
-print(f"joblib: {joblib.__version__}, numpy: {numpy.__version__}, sklearn: {sklearn.__version__}")
+import os
+import requests
+from io import BytesIO
 
 MODEL_URL = "https://huggingface.co/Eduard009/smartplant-model/resolve/main/smartplant_rf_model.joblib"
 ENCODER_URL = "https://huggingface.co/Eduard009/smartplant-model/resolve/main/plant_type_encoder.joblib"
@@ -26,5 +26,3 @@ def load_models():
     model = joblib.load(MODEL_PATH)
     encoder = joblib.load(ENCODER_PATH)
     return encoder, model
-
-encoder, model = load_models()
