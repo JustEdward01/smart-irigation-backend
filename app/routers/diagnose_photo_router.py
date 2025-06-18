@@ -1,6 +1,14 @@
 from fastapi import APIRouter, Depends, HTTPException, UploadFile, File
 from app.utils.auth import verify_api_key
-# importă și celelalte module necesare (plant_model, plant_index_to_class, SYMPTOM_ACTION_MAP, supabase, logging, io, np, Image, datetime)
+
+from app.ml.image_model_loader import plant_model, plant_index_to_class, IMG_SIZE, SYMPTOM_ACTION_MAP
+from app.services.db_service import supabase
+
+from PIL import Image
+import io
+import numpy as np
+import logging
+from datetime import datetime
 
 router = APIRouter(tags=["Diagnose Photo"])
 
