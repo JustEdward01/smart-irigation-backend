@@ -9,6 +9,7 @@ def load_models():
     model = joblib.load(BytesIO(requests.get(MODEL_URL).content))
     encoder = joblib.load(BytesIO(requests.get(ENCODER_URL).content))
     return model, encoder
+plant_type_encoder = joblib.load("path/to/encoder.joblib")
 
 # Exemplu de folosire:
 # model, encoder = load_models()
